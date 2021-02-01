@@ -37,13 +37,13 @@
                               <div class="button" onclick="showInput('btn-3')" id="btn-3">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
+                                <div class="button" onclick="clearPrevious()"><</div>
                                 <div class="button" onclick="showInput('btn-0')" id="btn-0">0</div>
                                 <div class="button" onclick="clearInput()">C</div>
                             </div>
                             <div>
                                 <button type="submit" class="submit-btn" onclick="matchPin()">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <p class="action-left" id="count-paragraph"> <span id="try-count">3</span> try left</p>
                             </div>
                     </div>
                 </div>
