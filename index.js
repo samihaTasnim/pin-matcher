@@ -19,13 +19,14 @@ function matchPin() {
     alert("Please generate a pin to continue")
     return ;
   }
-  else if(parseInt(document.getElementById("try-count").innerText) <= 0 ) {
-    alert("Sorry your cannot try again");
+  if(parseInt(document.getElementById("try-count").innerText) <= 0 ) {
+    alert("Sorry you cannot try again");
     return;
   }
-  else if( parseInt(document.getElementById("generated-pin").value) === parseInt(document.getElementById("button-output").value) ) {
+  if( document.getElementById("generated-pin").value === document.getElementById("button-output").value) {
     document.getElementById("notify-positive").style.display = "block";
     document.getElementById("count-paragraph").style.display = "none"
+    document.getElementById("generated-pin").value = ""
     clearInput()
   } 
   else {
